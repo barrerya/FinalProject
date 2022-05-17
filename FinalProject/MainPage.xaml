@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="FinalProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid >
+        <StackPanel Orientation="Horizontal">
+            
+            <StackPanel Width="500">
+                <TextBlock FontSize="20">Menu Items:</TextBlock>
+                <TextBlock Name="lbMeals" FontSize="20" Height="500" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+                <TextBlock TextWrapping="Wrap" FontSize="20" Text="Order ID to add to order:"/>
+                <TextBox Name="tbItemToAdd" TextWrapping="Wrap" FontSize="15" Text="Type here!"/>
+                <Button Name="btnAddItem" Width="500" Height="50" FontSize="20" Content="Add to Order" Click="btnAddItem_Click"/>
+                <TextBlock Name="lbOrder" Height="300" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+                <Button Name="btnSubmitOrder" Width="500" Height="50" FontSize="20" Content="Submit Order" Click="btnSubmitOrder_Click"/>
+            </StackPanel>
+
+            <StackPanel Width="500">
+                <TextBlock Name="lbWelcome" FontSize="20" Text="Login/Register bellow for 10% off your order!"></TextBlock>
+                <StackPanel Width="500" Height="50" Orientation="Horizontal">
+                    <TextBlock FontSize="20" Width="100">Username: </TextBlock>
+                    <TextBox Name="tbUser" TextWrapping="Wrap" FontSize="15" Width="400"/>
+                </StackPanel>
+                <StackPanel Width="500" Height="50" Orientation="Horizontal">
+                    <TextBlock FontSize="20" Width="100">Password:</TextBlock>
+                    <TextBox Name="tbPass" TextWrapping="Wrap" FontSize="15" Width="400"/>
+                </StackPanel>
+                <Button Name="btnLogin" Width="500" Height="50" FontSize="20" Content="Login" Click="btnLogin_Click"/>
+                <Button Name="btnRegister" Width="500" Height="50" FontSize="20" Content="Register New Account" Click="btnRegister_Click"/>
+                <Button Name="btnModUser" Width="500" Height="50" FontSize="20" Content="Change Username/Password (Must Login First)" Margin="0,0,0,50" Click="btnModUser_Click"/>
+
+                <TextBlock FontSize="20">Submit Anonymous Feedback Bellow</TextBlock>
+                <TextBox Name="tbFeedback" TextWrapping="Wrap" FontSize="15" Height="250"/>
+                <Button Name="btnFeedback" Width="500" Height="50" FontSize="20" Content="Submit Feedback" Click="btnFeedback_Click"/>
+
+                <TextBlock FontSize="20" Margin="0,23,0,0">System feedback will display bellow</TextBlock>
+                <TextBlock Name="lbSystemMsg"  Height="300" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            </StackPanel>
+            
+            <StackPanel Width="500">
+                <TextBlock FontSize="20" FontWeight="Bold">Admin Panel (only admin accounts can use)</TextBlock>
+                <TextBlock Name="lbCurrentTable" FontSize="20" Text="Current Table = "/>
+                <TextBlock Name="lbAdminTable" FontSize="20" Height="400" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+                <Button Name="btnNextTable" Width="500" Height="50" FontSize="20" Content="Next Table" Click="btnNextTable_Click"/>
+                
+                <TextBlock FontSize="20" TextWrapping="Wrap" Text="Enter values bellow to make changes to those columns in the table" Margin="0,15,0,0"/>
+                <StackPanel Width="500" Height="100" Orientation="Horizontal">
+                    <StackPanel Width="165" Height="100" BorderThickness="1" BorderBrush="Black">
+                        <TextBlock Name="lbColA" FontSize="20" Text="Column A" TextAlignment="Center"/>
+                        <TextBox Name="tbColA" TextWrapping="Wrap" FontSize="15" Height="72"/>
+                    </StackPanel>
+                    <StackPanel Width="165" Height="100" BorderThickness="1" BorderBrush="Black">
+                        <TextBlock Name="lbColB" FontSize="20" Text="Column B" TextAlignment="Center"/>
+                        <TextBox Name="tbColB" TextWrapping="Wrap" FontSize="15" Height="72"/>
+                    </StackPanel>
+                    <StackPanel Width="165" Height="100" BorderThickness="1" BorderBrush="Black">
+                        <TextBlock Name="lbColC" FontSize="20" Text="Column C" TextAlignment="Center"/>
+                        <TextBox Name="tbColC" TextWrapping="Wrap" FontSize="15" Height="72"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Width="500" Height="50" Orientation="Horizontal">
+                    <TextBlock FontSize="20" Width="115">ID to modify:</TextBlock>
+                    <TextBox Name="tbID" TextWrapping="Wrap" FontSize="15" Width="385"/>
+                </StackPanel>
+                <Button Name="btnCreateRow" Width="500" Height="50" FontSize="20" Content="Create Row" Click="btnCreateRow_Click"/>
+                <Button Name="btnUpdateRow" Width="500" Height="50" FontSize="20" Content="Update Row" Click="btnUpdateRow_Click"/>
+                <Button Name="btnDeleteRow" Width="500" Height="50" FontSize="20" Content="Delete Row" Click="btnDeleteRow_Click"/>
+
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
